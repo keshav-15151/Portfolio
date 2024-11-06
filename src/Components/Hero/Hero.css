@@ -33,6 +33,7 @@
     margin-bottom: 20px;
 }
 .hero-connect{
+    color: white;
     padding: 25px 45px;
     border-radius: 50px;
     background: linear-gradient(45deg, #00c9ff, #92fe9d);
@@ -47,10 +48,14 @@
     transition: 0.3s;
 }
 .hero-resume:hover{
-    border: rgb(171, 157, 7) solid 3px;
+    border: rgb(237, 235, 235) solid 3px;
     transform: scale(1.1);
 }
 .hero-connect:hover{
-    border: rgb(171, 157, 7) solid 3px;
+    border: rgb(237, 235, 235) solid 3px;
     transform: scale(1.1);
 }
+a{
+    text-decoration: none;
+}
+

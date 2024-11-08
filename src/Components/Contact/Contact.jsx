@@ -3,6 +3,9 @@ import './Contact.css'
 import Mail from '../../assets/mail.png'
 import Location from '../../assets/location.png'
 import contact from '../../assets/contact.jpg'
+import github from '../../assets/github.png'
+import twitter from '../../assets/twitter.png'
+import instagram from '../../assets/instagram.jpeg'
 
 
 export const Contact = () => {
@@ -10,6 +13,22 @@ export const Contact = () => {
     <div className='contact'> 
       <div className="contact-title">
         <h1>Get in Touch</h1>
+      </div>
+      <div className="contact-socials">
+        <a href="https://github.com/keshav-15151" target="_blank">
+        <div className="social">
+          <img src={github} alt="" />
+        </div>
+        </a>
+        <a href="https://x.com/Keshav_15151" target="_blank">
+        <div className="social">
+          <img src={twitter} alt="" />
+        </div>
+        </a>
+        <a href="https://www.instagram.com/keshav_15151/" target="_blank" ><div className="social" >
+          <img src={instagram} alt="" />
+        </div>
+        </a>
       </div>
       <div className="contact-section">
         <div className="contact-left">
@@ -37,8 +56,6 @@ export const Contact = () => {
           <label htmlFor="">Write your message here</label>
           <textarea name="message" rows="8" placeholder='Enter your message'></textarea>
           <button type = "submit" className="contact-submit">Submit Now</button>
-
-
         </form>
       </div>
     </div>

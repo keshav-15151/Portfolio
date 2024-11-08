@@ -4,7 +4,7 @@ import skills_data from '../../assets/skills_data'
 
 const Skills = () => {
   return (
-    <div className='Skill'>
+    <div id = 'skill' className='Skill'>
         <div className="skills-title">
             <h1>Skills</h1>
         </div>

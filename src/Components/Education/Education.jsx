@@ -4,7 +4,7 @@ import Education_data from '../../assets/education_data'
 
 const Education = () => {
   return (
-    <div className='education'>
+    <div className='education' id = 'education'>
         <div className="education-title">
             <h1>Education</h1>
         </div>

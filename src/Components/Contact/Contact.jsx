@@ -9,8 +9,32 @@ import instagram from '../../assets/instagram.jpeg'
 
 
 export const Contact = () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "3d1b5273-45d4-40c1-a270-143b93bce78b");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      alert(res.message)
+      console.log("Success", res);
+    }
+  };
+
   return (
-    <div className='contact'> 
+    <div id = 'contact' className='contact'> 
       <div className="contact-title">
         <h1>Get in Touch</h1>
       </div>
@@ -48,7 +72,7 @@ export const Contact = () => {
             </div>
           </div>
         </div>
-        <form className="contact-right">
+        <form id = 'connect' className="contact-right" onSubmit={onSubmit}>
           <label htmlFor="">Your Name</label>
           <input type="text"  placeholder='Enter your name' name='name'/>
           <label htmlFor="">Your Email</label>

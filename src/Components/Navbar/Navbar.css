@@ -25,3 +25,12 @@
 .nav-connect:hover{
     transform: scale(1.1);
 }
+
+.anchor-link{
+    text-decoration: none;
+    color: white;
+}
+.anchor-link:hover {
+    text-decoration: underline;
+    color: #c2ec07;
+}

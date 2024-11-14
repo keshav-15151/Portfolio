@@ -1,25 +1,58 @@
-import React, { useState } from 'react'
-import './Navbar.css'
+import React, { useState } from 'react';
+import './Navbar.css';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-
+import menu_open from '../../assets/menu_open.png';  
+import menu_close from '../../assets/menu_close.svg';  
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("home")
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className='navbar'>
+      <img
+        src={menu_open}
+        alt="Menu Open"
+        className={`nav-mob-open ${menuOpen ? 'hide' : ''}`}
+        onClick={handleMenuToggle}
+      />
 
-        <ul className='nav-menu'>
-            <li><AnchorLink className='anchor-link' href='#home'><p onClick={() => setMenu("home")}>Home</p></AnchorLink></li>
-            <li><AnchorLink className='anchor-link' offset={50} href='#about'><p onClick={() => setMenu("about")}>About Me</p></AnchorLink></li>
-            <li><AnchorLink className='anchor-link' offset={50} href='#skill'><p onClick={() => setMenu("skill")}>Skills</p></AnchorLink></li>
-            <li><AnchorLink className='anchor-link' offset={50} href='#education'><p onClick={() => setMenu("education")}>Education</p></AnchorLink></li>
-            <li><AnchorLink className='anchor-link' offset={50} href='#contact'><p onClick={() => setMenu("contact")}>Contact</p></AnchorLink></li>
+      <div className={`left-navbar ${menuOpen ? 'show' : ''}`}>
+        <img
+          src={menu_close}
+          alt="Menu Close"
+          className={`nav-mob-close ${menuOpen ? '' : 'hide'}`}
+          onClick={handleMenuToggle}
+        />
+        <ul className="nav-links">
+          <li><AnchorLink className='anchor-link' href='#home'>Home</AnchorLink></li>
+          <li><AnchorLink className='anchor-link' href='#about'>About Me</AnchorLink></li>
+          <li><AnchorLink className='anchor-link' href='#skills'>Skills</AnchorLink></li>
+          <li><AnchorLink className='anchor-link' href='#education'>Education</AnchorLink></li>
+          <li><AnchorLink className='anchor-link' href='#contact'>Contact</AnchorLink></li>
         </ul>
-        <div className="nav-connect">
-          <AnchorLink className='anchor-link' offset={50} href='#connect'><p onClick={() => setMenu("connect")}>Connect with me</p></AnchorLink>
-        </div>
-    </div>
-  )
-}
+      </div>
 
-export default Navbar
+      {/* Regular Navbar for Desktop */}
+      <div className="desktop-navbar">
+        <ul className='nav-menu'>
+          <li><AnchorLink className='anchor-link' href='#home'>Home</AnchorLink></li>
+          <li><AnchorLink className='anchor-link' href='#about'>About Me</AnchorLink></li>
+          <li><AnchorLink className='anchor-link' href='#skills'>Skills</AnchorLink></li>
+          <li><AnchorLink className='anchor-link' href='#education'>Education</AnchorLink></li>
+          <li><AnchorLink className='anchor-link' href='#contact'>Contact</AnchorLink></li>
+        </ul>
+      </div>
+
+      {/* Connect Button */}
+      <div className="nav-connect">
+        <AnchorLink className='anchor-link' href='#connect'>Connect with me</AnchorLink>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

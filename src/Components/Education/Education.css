@@ -1,20 +1,23 @@
-.education{
+.education {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 80px;
-    margin: 80px 170px; 
+    margin: 80px 170px;
 }
-.education-title{
+
+.education-title {
     position: relative;
 }
-.education-title h1{
+
+.education-title h1 {
     padding: 0px 30px;
     font-size: 80px;
     font-weight: 600;
 }
-.education-format{
+
+.education-format {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,17 +27,20 @@
     border: 2px solid white;
     cursor: pointer;
 }
-.education-container{
+
+.education-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     margin-bottom: 80px;
 }
-.education-format h3{
+
+.education-format h3 {
     font-size: 20px;
     font-weight: 600;
 }
-.education-format h2{
+
+.education-format h2 {
     font-size: 20px;
     font-weight: 800;
     background: linear-gradient(45deg, #00c9ff, #92fe9d);
@@ -42,15 +48,65 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.education h1{
+
+.education h1 {
     background: linear-gradient(45deg, #00c9ff, #92fe9d);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.education-format:hover{
+
+.education-format:hover {
     border: 2px solid white;
     background: linear-gradient(45deg, #232526, #414345);
     transform: scale(1.05);
     transition: 0.4s;
+}
+
+
+@media (max-width: 1200px) {
+    .education {
+        margin: 60px 100px;
+    }
+    .education-title h1 {
+        font-size: 60px;
+    }
+    .education-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .education {
+        margin: 40px 50px;
+        gap: 60px;
+    }
+    .education-title h1 {
+        font-size: 50px;
+    }
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+    .education-format {
+        padding: 40px;
+    }
+    .education-format h3, .education-format h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .education {
+        margin: 20px;
+        gap: 40px;
+    }
+    .education-title h1 {
+        font-size: 40px;
+    }
+    .education-format {
+        padding: 20px;
+    }
+    .education-format h3, .education-format h2 {
+        font-size: 16px;
+    }
 }

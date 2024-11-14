@@ -1,36 +1,141 @@
-.navbar{
+.navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin: 20px 170px;
-}
-
-.nav-menu{
-    display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333; /* Set solid background color here */
+    z-index: 10;
+    transition: top 0.3s ease-in-out;
+  }
+  
+  .navbar.hide {
+    top: -60px;
+  }
+  
+  .nav-menu {
+    display: flex;
     list-style: none;
-    gap: 60px;
-    font-size: 20px;
-}
-
-.nav-connect{
-    padding: 20px 20px;
+    gap: 30px;
+    font-size: 18px;
+  }
+  
+  .nav-connect {
+    padding: 10px 20px;
     border-radius: 50px;
     background: linear-gradient(45deg, #00c9ff, #92fe9d);
-    font-size: 22px;
+    font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.nav-connect:hover{
-    transform: scale(1.1);
-}
-
-.anchor-link{
+  }
+  
+  .anchor-link {
     text-decoration: none;
     color: white;
-}
-.anchor-link:hover {
+  }
+  
+  .anchor-link:hover {
     text-decoration: underline;
     color: #c2ec07;
-}
+  }
+  
+  .desktop-navbar {
+    display: flex;
+  }
+  
+  .desktop-navbar .nav-menu {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .left-navbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    background: #333;
+    padding-top: 50px;
+    gap: 30px;
+    flex-direction: column;
+    align-items: start;
+    z-index: 9;
+    padding-left: 20px;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .left-navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .left-navbar ul li {
+    list-style: none;
+  }
+  
+  .left-navbar .anchor-link {
+    color: white;
+  }
+  
+  .left-navbar .nav-mob-close {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  .nav-mob-close:hover {
+    background-color: #ccc;
+  }
+  
+  .nav-mob-open {
+    display: block;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  
+  .nav-mob-open:hover {
+    background-color: #ccc;
+  }
+  
+  .left-navbar.show {
+    display: flex;
+    left: 0;
+  }
+  
+  .nav-mob-open.hide {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-navbar {
+      display: none;
+    }
+  
+    .nav-connect {
+      display: none;
+    }
+  
+    .nav-mob-open {
+      display: block;
+    }
+  
+    .navbar.hide {
+      top: -60px;
+    }
+  }
+  

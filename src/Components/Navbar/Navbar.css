@@ -5,50 +5,54 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333; /* Set solid background color here */
+    background-color: #333;
+    /* Set solid background color here */
     z-index: 10;
     transition: top 0.3s ease-in-out;
-  }
-  
-  .navbar.hide {
+}
+
+.navbar.hide {
     top: -60px;
-  }
-  
-  .nav-menu {
+}
+
+.nav-menu {
     display: flex;
     list-style: none;
     gap: 30px;
     font-size: 18px;
-  }
-  
-  .nav-connect {
+}
+
+.nav-connect {
     padding: 10px 20px;
     border-radius: 50px;
     background: linear-gradient(45deg, #00c9ff, #92fe9d);
     font-size: 16px;
     cursor: pointer;
-  }
-  
-  .anchor-link {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.anchor-link {
     text-decoration: none;
     color: white;
-  }
-  
-  .anchor-link:hover {
+}
+
+.anchor-link:hover {
     text-decoration: underline;
     color: #c2ec07;
-  }
-  
-  .desktop-navbar {
+}
+
+.desktop-navbar {
     display: flex;
-  }
-  
-  .desktop-navbar .nav-menu {
+
+}
+
+.desktop-navbar .nav-menu {
     display: flex;
     gap: 30px;
-  }
-  
-  .left-navbar {
+}
+
+.left-navbar {
     display: none;
     position: fixed;
     top: 0;
@@ -63,23 +67,23 @@
     z-index: 9;
     padding-left: 20px;
     transition: left 0.3s ease-in-out;
-  }
-  
-  .left-navbar ul {
+}
+
+.left-navbar ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  
-  .left-navbar ul li {
+}
+
+.left-navbar ul li {
     list-style: none;
-  }
-  
-  .left-navbar .anchor-link {
+}
+
+.left-navbar .anchor-link {
     color: white;
-  }
-  
-  .left-navbar .nav-mob-close {
+}
+
+.left-navbar .nav-mob-close {
     position: absolute;
     top: 30px;
     right: 15px;
@@ -89,13 +93,13 @@
     padding: 10px;
     background-color: #fff;
     border-radius: 50%;
-  }
-  
-  .nav-mob-close:hover {
+}
+
+.nav-mob-close:hover {
     background-color: #ccc;
-  }
-  
-  .nav-mob-open {
+}
+
+.nav-mob-open {
     display: block;
     cursor: pointer;
     width: 20px;
@@ -103,39 +107,38 @@
     padding: 10px;
     margin-top: 10px;
     margin-left: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     background-color: #fff;
     border-radius: 50%;
-  }
-  
-  .nav-mob-open:hover {
+}
+
+.nav-mob-open:hover {
     background-color: #ccc;
-  }
-  
-  .left-navbar.show {
+}
+
+.left-navbar.show {
     display: flex;
     left: 0;
-  }
-  
-  .nav-mob-open.hide {
+}
+
+.nav-mob-open.hide {
     display: none;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .desktop-navbar {
-      display: none;
+        display: none;
     }
-  
+
     .nav-connect {
-      display: none;
+        display: none;
     }
-  
+
     .nav-mob-open {
-      display: block;
+        display: block;
     }
-  
+
     .navbar.hide {
-      top: -60px;
+        top: -60px;
     }
-  }
-  
+}

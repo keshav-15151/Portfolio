@@ -44,7 +44,6 @@
 
 .desktop-navbar {
     display: flex;
-
 }
 
 .desktop-navbar .nav-menu {
@@ -130,7 +129,7 @@
         display: none;
     }
 
-    .nav-connect {
+    .anchor-links {
         display: none;
     }
 

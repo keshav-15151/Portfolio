@@ -3,7 +3,7 @@ import './Hero.css'
 import profile_img from '../../assets/profile_img.svg'
 const  Hero = () => {
   return (
-    <div className='hero'>
+    <div id = 'hero' className='hero'>
         <img src = {profile_img} alt = ""/>
         <h1>Hey! I'm Keshav</h1>
         <p>I am a 3rd year computer science student in VIT Vellore </p>
@@ -13,7 +13,10 @@ const  Hero = () => {
                     Connect
                 </div>
             </a>
-            <div className="hero-resume">My Resume</div>
+        <a href="https://drive.google.com/file/d/1Cc1VFA1j65KrD8TUZm14pwXh8-7GOd9n/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+        <div className="hero-resume" >My Resume</div>
+        </a>
+            
         </div>
     </div>
   )

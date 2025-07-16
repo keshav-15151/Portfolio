@@ -9,8 +9,8 @@ const About = () => {
         <div className="about-sections">
             <div className="about-left"><img src={DP} alt="Profile" /></div>
             <div className="about-right">
-              <div className="about-para"><p>Hi! I'm Keshav Sharma, a passionate software developer with experience in DSA, web development, and more.
-              I’m currently preparing for a software engineering internship and building projects to enhance my portfolio.
+              <div className="about-para"><p>Hi! I'm Keshav Sharma, a passionate software developer with experience in DSA, web development, Machine learning and more.
+              I’m currently preparing for a software engineering roles and building projects to enhance my portfolio.
               </p></div>
               <div className="about-skills">
                 <div className="about-skill"><p>HTML, CSS</p><hr style={{width:"50%"}}/></div>

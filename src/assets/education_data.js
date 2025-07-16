@@ -4,7 +4,7 @@ const education_data = [
         E_degree : "Bachelor of Technology, Computer science ",
         E_ins : "VIT University, Vellore",
         E_duration : "2022-2026",
-        E_grade : "9.16"
+        E_grade : "9.23"
     },
     {
         E_no : "02.",
